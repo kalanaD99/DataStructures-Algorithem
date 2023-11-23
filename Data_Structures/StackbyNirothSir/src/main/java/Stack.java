@@ -9,9 +9,20 @@ public class Stack {
     }
     public void push(int data){
         elementData[nextIndex]=data;
-        nextIndex++;
+        ++nextIndex;
     }
 
 
+    public void printStack() {
+        System.out.print("[");
+        for (int i = nextIndex-1 ; i >=0 ; i--){
+            System.out.print(elementData[i] +", ");
+        }
+        System.out.println("\b\b]");
+    }
+
+    public int pop() {
+       return elementData[nextIndex--];
+    }
 }
 
